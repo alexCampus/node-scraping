@@ -2,21 +2,20 @@ extends layout
 
 block content
 
-  h1 #{siteName}!
-  
-  h3 Categories
-  ul
-    each val in categories
-      li= val
-  h3 Positions
-  ul
-    each val in positions
-      li= val
-  h3 Locations
-  ul
-    each val in locations
-      li= val
-  h3 Tags
-  ul
-    each val in tags
-      li= val
+    h1 #{recetteName}!
+
+    img(src='#{img}')
+
+    h3 Ingrédients
+    ul
+        each val in ingredients
+            li= val
+    h3 Ustensiles
+    ul
+        each val in ustensiles
+            li= val
+    h3 Etapes
+    ul
+        each val, index in etapes
+            span= val + ' : '
+            li= textEtapes[index]
